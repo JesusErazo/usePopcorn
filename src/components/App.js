@@ -1,5 +1,6 @@
 import MainHeader from "./MainHeader";
 import MovieList from "./MovieList";
+import MovieStats from "./MovieStats";
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -53,7 +54,10 @@ function App() {
       <MainHeader />
       <div className="box-content">
         <MovieList moviesData={tempMovieData} />
-        <MovieList moviesData={tempMovieData} />
+        <div className="box-stats">
+          <MovieStats />
+          <MovieList moviesData={tempWatchedData} />
+        </div>
       </div>
     </div>
   );
