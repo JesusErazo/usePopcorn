@@ -1,16 +1,13 @@
+import Logo from "./Logo";
+import NumResults from "./NumResults";
+import Search from "./Search";
+
 export default function NavBar() {
   return (
     <nav className="main-header">
-      <h3 className="brand">🍿usePopcorn</h3>
-      <input
-        className="search"
-        type="text"
-        placeholder="Search movies..."
-        name="Search movies"
-      ></input>
-      <p className="found-results">
-        Found <span>3</span> results
-      </p>
+      <Logo>🍿usePopcorn</Logo>
+      <Search placeholder="Search movies..." htmlName="Search movies" />
+      <NumResults num={3} />
     </nav>
   );
 }
