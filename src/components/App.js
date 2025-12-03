@@ -1,3 +1,4 @@
+import MovieList from "./MovieList";
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -48,7 +49,7 @@ const tempWatchedData = [
 function App() {
   return (
     <div className="App">
-      <h1>Hi, this are the starter files.</h1>
+      <MovieList moviesData={tempMovieData} />
     </div>
   );
 }
