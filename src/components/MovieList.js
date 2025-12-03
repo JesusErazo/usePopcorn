@@ -8,6 +8,9 @@ export default function MovieList({ moviesData }) {
           posterUrl={item.Poster}
           title={item.Title}
           releaseYear={item.Year}
+          runtime={item.runtime}
+          imdbRating={item.imdbRating}
+          userRating={item.userRating}
         />
       ))}
       <button className="btn-list">&minus;</button>
