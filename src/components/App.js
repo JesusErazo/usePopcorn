@@ -1,4 +1,4 @@
-import MainHeader from "./MainHeader";
+import NavBar from "./NavBar";
 import MovieList from "./MovieList";
 import MovieStats from "./MovieStats";
 const tempMovieData = [
@@ -51,14 +51,13 @@ const tempWatchedData = [
 function App() {
   return (
     <div className="App">
-      <MainHeader />
-      <div className="box-content">
-        <MovieList moviesData={tempMovieData} />
+      <NavBar />
+      <main className="box-content">
+        <MovieList moviesData={tempMovieData} addOpenListBtn={true} />
         <div className="box-stats">
-          <MovieStats />
-          <MovieList moviesData={tempWatchedData} />
+          <MovieStats moviesData={tempWatchedData} />
         </div>
-      </div>
+      </main>
     </div>
   );
 }

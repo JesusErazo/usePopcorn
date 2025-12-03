@@ -1,6 +1,6 @@
-export default function MainHeader() {
+export default function NavBar() {
   return (
-    <div className="main-header">
+    <nav className="main-header">
       <h3 className="brand">🍿usePopcorn</h3>
       <input
         className="search"
@@ -11,6 +11,6 @@ export default function MainHeader() {
       <p className="found-results">
         Found <span>3</span> results
       </p>
-    </div>
+    </nav>
   );
 }

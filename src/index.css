@@ -53,6 +53,15 @@ body {
   flex-direction: column;
 }
 
+.stats-content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex: 1;
+  border-radius: 0.7rem;
+  background-color: var(--color-background-500);
+}
+
 .movie-list {
   position: relative;
   display: flex;
@@ -77,11 +86,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  position: relative;
   background-color: var(--color-background-500);
   padding: 20px;
   border-radius: 0.7rem;
-  margin-bottom: 10px;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
 }
 
 .movie-item {
