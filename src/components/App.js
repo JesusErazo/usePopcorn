@@ -1,3 +1,4 @@
+import MainHeader from "./MainHeader";
 import MovieList from "./MovieList";
 const tempMovieData = [
   {
@@ -49,7 +50,11 @@ const tempWatchedData = [
 function App() {
   return (
     <div className="App">
-      <MovieList moviesData={tempMovieData} />
+      <MainHeader />
+      <div className="box-content">
+        <MovieList moviesData={tempMovieData} />
+        <MovieList moviesData={tempMovieData} />
+      </div>
     </div>
   );
 }

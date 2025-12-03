@@ -10,6 +10,7 @@ export default function MovieList({ moviesData }) {
           releaseYear={item.Year}
         />
       ))}
+      <button className="btn-list">&minus;</button>
     </ul>
   );
 }
