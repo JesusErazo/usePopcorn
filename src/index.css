@@ -14,19 +14,25 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 /*SEARCHING LIST*/
 
 .App {
+  height: 100vh;
   display: flex;
-  align-items: stretch;
+  flex-direction: column;
 }
 
 .movie-list {
+  flex: 1;
   background-color: #25292d;
   width: 400px;
   margin: 20px;
   border-radius: 0.9rem;
-  height: 100vh;
 }
 
 .movie-item {
