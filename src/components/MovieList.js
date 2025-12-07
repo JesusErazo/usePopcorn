@@ -1,5 +1,6 @@
 import MovieItem from "./MovieItem";
 import { useState } from "react";
+
 export default function MovieList({ moviesData, addOpenListBtn }) {
   const [openList, setOpenList] = useState(true);
 
@@ -12,9 +13,9 @@ export default function MovieList({ moviesData, addOpenListBtn }) {
             posterUrl={item.Poster}
             title={item.Title}
             releaseYear={item.Year}
-            runtime={item.runtime}
-            imdbRating={item.imdbRating}
             userRating={item.userRating}
+            imdbRating={item.imdbRating}
+            runtime={item.runtime}
           />
         ))}
       {addOpenListBtn && (

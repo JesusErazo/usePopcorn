@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MovieList from "./MovieList";
+
 export default function MovieStats({ moviesData }) {
   const [openStats, setOpenStats] = useState(true);
   const moviesAmount = moviesData?.length ?? 0;

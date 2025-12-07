@@ -1,5 +1,10 @@
 import NavBar from "./NavBar";
 import Main from "./Main";
+import Logo from "./Logo";
+import Search from "./Search";
+import NumResults from "./NumResults";
+import MovieList from "./MovieList";
+import MovieStats from "./MovieStats";
 import { useState } from "react";
 
 const tempMovieData = [
@@ -50,12 +55,22 @@ const tempWatchedData = [
 ];
 
 function App() {
-  const [movies, setMovies] = useState(tempMovieData);
+  const [foundMovies, setMovies] = useState(tempMovieData);
   const [watchedMovies, setWatchedMovies] = useState(tempWatchedData);
+  const moviesAmount = foundMovies?.length ?? 0;
   return (
     <div className="App">
-      <NavBar foundMovies={movies} />
-      <Main foundMovies={movies} watchedMovies={watchedMovies} />
+      <NavBar>
+        <Logo>🍿usePopcorn</Logo>
+        <Search placeholder="Search movies..." htmlName="Search movies" />
+        <NumResults num={moviesAmount} />
+      </NavBar>
+      <Main>
+        <MovieList moviesData={foundMovies} addOpenListBtn={true} />
+        <div className="box-stats">
+          <MovieStats moviesData={watchedMovies} />
+        </div>
+      </Main>
     </div>
   );
 }
