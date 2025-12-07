@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
-import MovieList from "./MovieList";
-import MovieStats from "./MovieStats";
+import Main from "./Main";
+import { useState } from "react";
+
 const tempMovieData = [
   {
     imdbID: "tt1375666",
@@ -49,15 +50,12 @@ const tempWatchedData = [
 ];
 
 function App() {
+  const [movies, setMovies] = useState(tempMovieData);
+  const [watchedMovies, setWatchedMovies] = useState(tempWatchedData);
   return (
     <div className="App">
-      <NavBar />
-      <main className="box-content">
-        <MovieList moviesData={tempMovieData} addOpenListBtn={true} />
-        <div className="box-stats">
-          <MovieStats moviesData={tempWatchedData} />
-        </div>
-      </main>
+      <NavBar foundMovies={movies} />
+      <Main foundMovies={movies} watchedMovies={watchedMovies} />
     </div>
   );
 }

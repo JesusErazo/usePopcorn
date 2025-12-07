@@ -1,3 +1,4 @@
+import MovieItemStats from "./MovieItemStats";
 export default function MovieItem({
   posterUrl,
   title,
@@ -14,11 +15,11 @@ export default function MovieItem({
         {imdbRating !== undefined &&
         userRating !== undefined &&
         runtime !== undefined ? (
-          <div className="movie-stats-details">
-            <span>⭐ {userRating}</span>
-            <span>🌟 {imdbRating}</span>
-            <span>⌛ {runtime} min</span>
-          </div>
+          <MovieItemStats
+            userRating={userRating}
+            imdbRating={imdbRating}
+            runtime={runtime}
+          />
         ) : (
           <p>📆 {releaseYear}</p>
         )}
